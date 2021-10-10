@@ -1,0 +1,4 @@
+<div class="menu-item"><a href="gallery.html" class="main-nav-link w--current">Artist</a></div>People
+    <div class="menu-item"><a href="gallery.html" class="main-nav-link w--current">Engineer</a></div>Sport
+    <div class="menu-item"><a href="gallery.html" class="main-nav-link w--current">Scribe</a></div>Nature
+    <div class="menu-item"><a href="about.html" class="main-nav-link low-opacity">About</a></div>
