@@ -1,0 +1,54 @@
+{
+  "name": "batmanwgd",
+  "version": "1.0.0",
+  "description": "@batmanwgd personal website",
+  "main": "index.js",
+  "repository": "git@github.com:batmanwgd/batmanwgd.git",
+  "author": "(Kaska <batmanwgd@gmail.com>)",
+  "browserslist": [
+    "defaults"
+  ],
+  "comments": {},
+  "license": "MIT",
+  "dependencies": {
+    "auto-changelog": "^2.3.0",
+    "auto-version": "^1.0.11",
+    "autoprefixer": "^10.3.7",
+    "dart-sass": "^1.25.0",
+    "glob": "^7.2.0",
+    "highlightjs": "^9.16.2",
+    "introjs": "^0.2.2",
+    "markdown-it": "^12.2.0",
+    "path": "^0.12.7",
+    "pdfobject": "^2.2.7",
+    "shelljs": "^0.8.4",
+    "shepherd.js": "^8.3.1"
+  },
+  "scripts":{
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "dev": "node _servers/htmlFile.js",
+    "simple": "node _servers/simple.js",
+    "sass": "node-sass -w scss -o css",
+    "clean": "shx echo \"yay!\" ",
+    "clean:install": "shx rm -rf package-lock.json node_modules ",
+    "start": "node _servers/simple.js",
+    "build-css": "sass -w --load-path=node_modules src:dist --style=compressed",
+    "watch-css": "yarn build-css && sass --load-path=node_modules -w src:dist --style=compressed",
+    "module-backup": "mkdir nm-bkup/$(date +\"%d-%m-%Y\") && shx cp -R node_modules nm-bkup/$(date +\"%d-%m-%Y\")",
+    "prebuild": "npm run clean",
+    "precheck": "npm version",
+    "prestart": "npm run clean",
+    "release": "standard-version",
+    "release:dry-run": "standard-version --dry-run",
+    "postbuild": "shx rm -rf doks && mv public doks"
+  },
+  "auto-changelog": {
+    "output": "HISTORY.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
