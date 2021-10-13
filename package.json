@@ -13,10 +13,9 @@
   "dependencies": {
     "auto-changelog": "^2.3.0",
     "auto-version": "^1.0.11",
-    "browser-sync": "^2.27.5",
-    "dart-sass": "^1.25.0",
     "glob": "^7.2.0",
     "grunt": "^1.4.1",
+    "grunt-bump": "^0.8.0",
     "highlightjs": "^9.16.2",
     "introjs": "^0.2.2",
     "markdown-it": "^12.2.0",
@@ -24,6 +23,13 @@
     "pdfobject": "^2.2.7",
     "shelljs": "^0.8.4",
     "shepherd.js": "^8.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "browser-sync": "^2.27.5",
+    "dart-sass": "^1.25.0",
+    "env": "^0.0.2",
+    "grunt-babel": "^8.0.0"
   },
   "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md",

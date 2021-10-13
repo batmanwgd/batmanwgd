@@ -46,9 +46,10 @@ body {
 .card {
   /* box-shadow: 0 1em 2em rgba(41, 47, 54, 0.7), 0 0 1em rgba(41, 47, 54, 0.7); */
   /* box-shadow: 0 1em 2em hsla(180, 0%, 0%, 0.7), 0 0 1em hsla(210, 0%, 0%, 0.7);
-  background-image: linear-gradient(45deg, rgba(41, 47, 54, 0.2), transparent); */
-  box-shadow: 0 1em 2em hsla(180, 0%, 9%, 0.7), 0 0 1em hsla(210, 9%, 9%, 0.7);
-  background-image: linear-gradient(45deg, hsla(180, 0%, 9%, 0.2), transparent);
+  background-image: linear-gradient(45deg, rgba(41, 47, 54, 0.2), transparent); */ 
+  /* box-shadow: 0 1em 2em hsla(0, 100%, 18%, 0.7), 0 0 1em hsla(0, 94%, 6%, 0.7); MORE SUBTLE */
+  /* box-shadow: 0.4em 0.4em 0.8em hsla(0, 100%, 18%, 0.7), 0.4em 0.4em 0.4em hsla(0, 94%, 6%, 0.7); LESS SUBTLE
+  background-image: linear-gradient(45deg, hsla(0, 100%, 18%, 0.2), transparent); */
   /* padding: 7em 2em 2em 12em; */
   padding: 7em 2em 2em 7em;
   border-radius: 1.3em;
@@ -84,12 +85,69 @@ body {
   margin: -0.4em 0 0 0;
 }
 
-.src {
+.source {
   color: inherit;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 0.8em;
+  font-style: italic;
+  margin-top: -3.4em;
+  display: block ruby;
+}
+
+a, a.source {
+  color:hsl(0, 7%, 97%);
+  text-decoration: underline;
+  text-decoration-color: hsla(351, 4%, 69%, 0.4);
+  text-decoration-thickness: 2px;
+  text-decoration-style: single;
+  opacity: 0.7;
+}
+
+a, a.source:hover, a.source:focus, a.source:active, a.source:focus-visible, a.source:focus-within {
+  opacity: 1;
+}
+
+footer nav {
+  margin: 0 auto;
+}
+footer nav ul {
+  list-style-type: none;
+  list-style-position: unset;
+  display: inline-flex;
+  text-align: justify;
+  opacity: 0.8;
+}
+
+footer nav ul li {
+  padding-right: 1em;
+  margin-top: 3em;
+}
+
+li:hover, li:focus, li:focus-visible, li:focus-within {
+  opacity: 1;
+}
+
+div#nav-disclaimer {
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+div#nav-disclaimer p {
+  font-family:'Arima Madurai', sans-serif;
+  font-size: 0.90em;
+  font-style: italic;
+  /* color:hsla(351, 4%, 69%, 0.4); */
+  color:hsla(0, 7%, 97%, 0.8);
+  text-align: justify;
+  /* margin-top: 2em; */
+  opacity: 0.4;
+}
+
+div#nav-disclaimer p:hover, div#nav-disclaimer p:focus, div#nav-disclaimer p:focus-visible, div#nav-disclaimer p:focus-within {
+  cursor: help;
+  opacity: 1;
 }
 
 /* .text-after {
