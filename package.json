@@ -13,9 +13,10 @@
   "dependencies": {
     "auto-changelog": "^2.3.0",
     "auto-version": "^1.0.11",
-    "autoprefixer": "^10.3.7",
+    "browser-sync": "^2.27.5",
     "dart-sass": "^1.25.0",
     "glob": "^7.2.0",
+    "grunt": "^1.4.1",
     "highlightjs": "^9.16.2",
     "introjs": "^0.2.2",
     "markdown-it": "^12.2.0",
@@ -24,14 +25,15 @@
     "shelljs": "^0.8.4",
     "shepherd.js": "^8.3.1"
   },
-  "scripts":{
+  "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "dev": "node _servers/htmlFile.js",
-    "simple": "node _servers/simple.js",
-    "sass": "node-sass -w scss -o css",
-    "clean": "shx echo \"yay!\" ",
+    "dummydev": "node _servers/htmlFile.js",
+    "dummysimple": "node _servers/simple.js",
+    "static": "browser-sync start --server --files 'css/*.css'",
+    "sass": "sass $1 css/$2.css",
+    "clean": "echo \"yay!\" ",
     "clean:install": "shx rm -rf package-lock.json node_modules ",
-    "start": "node _servers/simple.js",
+    "dummystart": "node _servers/simple.js",
     "build-css": "sass -w --load-path=node_modules src:dist --style=compressed",
     "watch-css": "yarn build-css && sass --load-path=node_modules -w src:dist --style=compressed",
     "module-backup": "mkdir nm-bkup/$(date +\"%d-%m-%Y\") && shx cp -R node_modules nm-bkup/$(date +\"%d-%m-%Y\")",
@@ -50,5 +52,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "exports": {
+    ".": "./js/index.js",
+    "./package.json": "./package.json"
   }
 }

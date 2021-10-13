@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Poppins:300|Playfair+Display|Meddon')
+
+html
+  background: #4ECDC4
+  color: #292F36
+  
+*
+  margin: 0
+  padding: 0
+  // outline: 1px dashed yellow
+
+body
+  width: 34em
+  margin: 5vmin auto
+  // Control all the contents with this single font-size
+  // All items inside are relative to this size
+  font-size: calc(0.8vmin + 1vmax)
+  
+.title,
+.keyword
+  color: #DAF7A6
+  font-family: 'Meddon', script
+  font-family: 'Dawning of a New Day'
+  font-weight: normal
+  
+.title
+  font-size: 18em
+  text-align: center
+  margin: 0
+  position: relative
+  margin-left: -0.3em
+  line-height: 1.1
+  // Negative bottom margin to pull the card 'into' the title
+  margin-bottom: -0.5em
+  // Negative z-index to make the title appear behind the card
+  z-index: -1
+  
+.card
+  box-shadow: 0 1em 2em rgba(#292F36, 0.7), 0 0 1em rgba(#292F36, 0.7)
+  background-image: linear-gradient(45deg, rgba(#292F36, 0.2), transparent)
+  padding: 7em 2em 2em 12em
+  border-radius: 1.3em
+  text-align: right
+  margin: 0 2em 0 2em
+
+.quote
+  font-family: 'Playfair Display', 'Georgia', serif
+  font-size: 1.4em
+  line-height: 1.3
+  display: block
+  margin-bottom: 2em
+  quotes: "“" "”" "‘" "’"
+  &::before,
+  &::after
+    font-size: 1.4em
+    display: inline-block
+  &::before
+    content: open-quote
+    margin-right: 0.1em
+  &::after
+    content: close-quote
+    margin-left: 0.2em
+  
+.keyword
+  font-size: 3em
+  display: inline-block
+  margin: -1em 0 0 0
+
+.src
+  color: inherit
+  font-family: 'Poppins', sans-serif
+  font-weight: 300
+  font-style: normal
+  font-size: 0.8em

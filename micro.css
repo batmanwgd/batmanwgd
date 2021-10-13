@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Poppins:300|Playfair+Display|Meddon");
+html {
+  /* background: #4ECDC4; */
+  /* background: hsl(176, 56%, 55%); */
+  /* color: #292F36; */
+  background: hsl(0, 0%, 1%);
+  color: hsl(0, 7%, 97%);
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 34em;
+  margin: 5vmin auto;
+  font-size: calc(0.8vmin + 1vmax);
+}
+
+.title,
+.keyword {
+  /* color: hsl(81, 84%, 81%); */
+  color: hsl(352, 81%, 41%);
+  font-family: "Meddon", script;
+  font-family: "Dawning of a New Day";
+  font-weight: normal;
+  
+}
+
+.title {
+  /* font-size: 18em; */
+  text-align: center;
+  margin: 0;
+  position: relative;
+  /* margin-left: -0.3em; */
+  line-height: 1.1;
+  margin-bottom: -0.5em;
+  z-index: -1;
+  font-size: 24em;
+  margin-left: -0.5em;
+}
+
+.card {
+  /* box-shadow: 0 1em 2em rgba(41, 47, 54, 0.7), 0 0 1em rgba(41, 47, 54, 0.7); */
+  /* box-shadow: 0 1em 2em hsla(180, 0%, 0%, 0.7), 0 0 1em hsla(210, 0%, 0%, 0.7);
+  background-image: linear-gradient(45deg, rgba(41, 47, 54, 0.2), transparent); */
+  box-shadow: 0 1em 2em hsla(180, 0%, 9%, 0.7), 0 0 1em hsla(210, 9%, 9%, 0.7);
+  background-image: linear-gradient(45deg, hsla(180, 0%, 9%, 0.2), transparent);
+  /* padding: 7em 2em 2em 12em; */
+  padding: 7em 2em 2em 7em;
+  border-radius: 1.3em;
+  text-align: right;
+  margin: 0 2em 0 2em;
+}
+
+.quote {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: 1.4em;
+  line-height: 1.3;
+  display: block;
+  margin-bottom: 2em;
+  quotes: "“" "”" "‘" "’";
+}
+.quote::before, .quote::after {
+  font-size: 1.4em;
+  display: inline-block;
+}
+.quote::before {
+  content: open-quote;
+  margin-right: 0.1em;
+}
+.quote::after {
+  content: close-quote;
+  margin-left: 0.2em;
+}
+
+.keyword {
+  font-size: 3em;
+  display: inline-block;
+  /* margin: -1em 0 0 0; */
+  margin: -0.4em 0 0 0;
+}
+
+.src {
+  color: inherit;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8em;
+}
+
+/* .text-after {
+  margin-top: -0.5em;
+  margin: 0.4em 0 0 0 !important;
+  display: block; 
+} */

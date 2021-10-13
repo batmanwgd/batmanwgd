@@ -6,18 +6,9 @@
   NODE_VERSION = "16.11.0"
   NPM_VERSION = "8.0.0"
 
-[context.production]
-  command = "node _servers/simple.js"
-
-[context.deploy-preview]
-  command = "node _servers/simple.js -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy]
-  command = "node _servers/simple.js -b $DEPLOY_PRIME_URL"
-
 [dev]
   framework = "#custom"
-  command = "node _servers/simple.js --bind=0.0.0.0 --disableFastRender"
+  command="gulp dev"
   targetPort = 1313
   port = 8888
   publish = "/"
