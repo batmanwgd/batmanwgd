@@ -27,9 +27,11 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "browser-sync": "^2.27.5",
+    "coffeescript": "^2.6.1",
     "dart-sass": "^1.25.0",
     "env": "^0.0.2",
-    "grunt-babel": "^8.0.0"
+    "grunt-babel": "^8.0.0",
+    "js2coffee": "^2.2.0"
   },
   "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md",
